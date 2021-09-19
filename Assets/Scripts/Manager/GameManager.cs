@@ -16,7 +16,19 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private EdgeCollider2D border;
 
+    [SerializeField]
+    public Paddle paddle = null;
+
 
     //TODO
     //Using const data defined above "Instantiate" new pieces to fill the view with
+    void Start()
+    {
+        for (int i = 0; i < TOTAL_ROWS; i++) {
+            for (int j = 0; j < PIECE_COUNT_PER_ROW; j++) {
+                Vector3 piecePosition = new Vector3(pieces.position.x + (PIECE_LENGTH * j), pieces.position.y - (ROW_HEIGHT * i), 0f);
+                Instantiate(piecePrefab, piecePosition, Quaternion.identity);
+            }
+        }
+    }
 }
