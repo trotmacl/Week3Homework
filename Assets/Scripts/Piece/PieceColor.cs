@@ -29,7 +29,30 @@ public class PieceColor : MonoBehaviour
     {
         //TODO
         // set spriteRenderer.sprite to a random sprite that is present above
-        
+
         //spriteRenderer.sprite = ???;
+        switch (Random.Range(0, 7)) {
+            case 0:
+                spriteRenderer.sprite = blueColor;
+                break;
+            case 1:
+                spriteRenderer.sprite = redColor;
+                break;
+            case 2:
+                spriteRenderer.sprite = greenColor;
+                break;
+            case 3:
+                spriteRenderer.sprite = purpleColor;
+                break;
+            case 4:
+                spriteRenderer.sprite = goldColor;
+                break;
+            case 5:
+                spriteRenderer.sprite = greyColor;
+                break;
+            case 6:
+                spriteRenderer.sprite = brownColor;
+                break;
+        }
     }
 }
